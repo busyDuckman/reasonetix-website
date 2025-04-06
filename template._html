@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reasonetix</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Reasonetix is a consulting firm specialising in AI, robotics, and computational science.">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/rx.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="js/basic_page.js" defer></script>
+  <noscript> <style> body.deferred { visibility: visible; } </style></noscript>
+</head>
+
+<body class="deferred">
+
+<!-- basic-page.js will insert p_header.html & p_hero.html -->
+<div id="header"></div>
+<div id="hero"></div>
+
+
+<div class="rx_basic_page">
+
+  
+</div>
+
+<!-- <script src="js/basic_page.js"></script> -->
+</body>
+
+</html>

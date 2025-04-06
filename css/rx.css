@@ -1,0 +1,284 @@
+/* ---------------------------------------------------------------------------
+ *  My basic look and feel (I keep my text dark because that is polite).
+ * --------------------------------------------------------------------------- 
+ */
+.rx_basic_page {
+    max-width: 720px;
+    margin: 64px auto;
+    padding: 0 16px;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #000001;
+  }
+  
+  .rx_basic_page h1,
+  .rx_basic_page h2,
+  .rx_basic_page h3,
+  .rx_basic_page h4 {
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #000001;
+  }
+  
+  .rx_basic_page p {
+    margin: 1em 0;
+  }
+  
+  .rx_basic_page ul,
+  .rx_basic_page ol {
+    margin: 1em 0 1em 1.5em;
+    padding: 0;
+  }
+  
+  .rx_basic_page li {
+    margin-bottom: 0.5em;
+  }
+  
+  .rx_basic_page strong,
+  .rx_basic_page b {
+    font-weight: 600;
+    color: #000010;
+  }
+
+  .rx_basic_page img {
+    display: block;
+    margin: 24px auto;
+    /* max-height: 180px; */
+    width: 400px;
+    height: 220px;
+    object-fit: cover;
+
+    border-radius: 8px;
+    border: 2px solid #000001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+/* ---------------------------------------------------------------------------
+ *  Related to hiding pages while loading
+ * --------------------------------------------------------------------------- 
+ */
+body.deferred {
+    visibility: hidden;
+  }
+  
+  body.loaded {
+    visibility: visible;
+  }
+
+/* ---------------------------------------------------------------------------
+ *  Related to the hero image
+ * --------------------------------------------------------------------------- 
+ */
+.hero {
+    position: relative; 
+    background: url('../images/stock/sky_3.webp') no-repeat center center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    color: black;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* adjust opacity as needed */
+    z-index: 0;
+}
+
+
+.hero-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.hero-text p {
+  font-size: 16px;
+  margin: 8px 0 16px;
+}
+.hero-buttons .w3-button {
+  margin-right: 8px;
+  border-radius: 20px;
+}
+
+/* .hero-logo {
+    top: 64px;
+    right: 300px;
+    position: absolute;
+    z-index: 10;
+} */
+
+/* .hero-content {
+    display: flex;
+
+    justify-content: center;
+  
+    align-items: center;
+    padding: 64px 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+.hero-logo {
+    top: 32px;
+    right: 300px;
+    position: absolute;
+    z-index: 10;
+}
+
+.hero-logo img {
+    max-height: 180px;
+} */
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 32px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap; /* Allow wrap on smaller screens */
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .hero-logo {
+    position: static; /* Remove absolute positioning */
+    text-align: center;
+  }
+  
+  .hero-logo img {
+    max-height: 180px;
+    max-width: 100%;
+  }
+  
+
+/* ---------------------------------------------------------------------------
+ *  Related to the portfolio grid
+ * --------------------------------------------------------------------------- 
+ */
+
+ .portfolio_image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .portfolio_overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .portfolio_image:hover .portfolio_overlay {
+    opacity: 1;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .portfolio_grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 32px;
+    margin-top: 32px;
+  }
+  
+  .portfolio_item {
+    /* margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    background: white; */
+    border: 1px solid #ccc; 
+    border: 0px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .portfolio_grid img {
+    /* width: 100%; */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  
+  .portfolio_grid h4,
+  .portfolio_grid p {
+    padding: 0 16px;
+  }
+  
+  .portfolio_grid h4 {
+    margin: 12px 0 4px;
+    font-size: 18px;
+  }
+  
+  .portfolio_grid p {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 16px;
+  } 
+
+  @media (max-width: 900px) {
+    .portfolio_grid {
+        grid-template-columns: repeat(2, 300px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .portfolio_grid {
+        grid-template-columns: 300px;
+    }
+  }
+
+/* ---------------------------------------------------------------------------
+ *  Related to the top of the header (contact call to action)
+ * --------------------------------------------------------------------------- 
+ */
+
+ /* .topbar span {
+    color: #ccc;
+    font-size: 0.8rem;
+ }
+
+.topbar, .topbar a, .topbar i{
+    color: #cc0000;
+    font-size: 0.9rem;
+}
+
+.topbar a:hover,
+.topbar i:hover {
+  color: red;
+} */
+
+.topbar {
+    font-size: 0.9rem;
+  }
+  
+  .topbar span {
+    color: #ccc;
+    font-size: 0.8rem;
+  }
+  
+  .topbar i {
+    color: #cc0000;
+  }
+  
+  .topbar a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .topbar a:hover,
+  .topbar i:hover {
+    color: white;
+  }
