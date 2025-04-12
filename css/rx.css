@@ -74,7 +74,7 @@ body.deferred {
  */
 .hero {
     position: relative; 
-    background: url('../images/stock/sky_3.webp') no-repeat center center;
+    background: url('../images/stock/sky_3_crop.webp') no-repeat center center;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     color: black;
@@ -290,7 +290,6 @@ body.deferred {
     }
 
     .hero {
-      background: url('../images/stock/sky_3.webp') no-repeat center center;
       clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
       max-height: 200px;
     }
@@ -318,6 +317,11 @@ body.deferred {
   @media (max-width: 600px) {
     .portfolio_grid {
         grid-template-columns: 300px;
+    }
+
+    .hero {
+      background: url('../images/stock/sky_3_crop_mobile.webp') no-repeat center center;
+      max-height: 160px;
     }
 
     .hero-content {
